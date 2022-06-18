@@ -14,7 +14,7 @@ def application(request):
             mobile = request.POST["mobile"],
         )
         return HttpResponseRedirect(reverse("testapp:home"))
-    return render(request, "testapp/apply.html")
+    return render(request, "testapp/applying.html")
 
 
 def index(request):
