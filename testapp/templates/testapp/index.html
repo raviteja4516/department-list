@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEPARTMENT LIST</title>
+</head>
+<body>
+{% if latest_department_list %}
+    <ul>
+    {% for department in latest_department_list %}
+        <li><a href="/testapp/detailing/{{ department.id }}/">{{ department.department_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No departments are available.</p>
+{% endif %}
+
+</body>
+</html>

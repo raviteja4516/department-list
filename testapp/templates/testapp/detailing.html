@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEPARTMENT STUDENT LIST</title>
+</head>
+<body>
+<h1 style="color: orange;font-size=50px">DEPARTMENT STUDENT LIST</h1>
+<div class="container",align="center">
+    <table border="2" margin = 'auto'>
+        <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        </thead>
+        {% for student in department.student_set.all %}
+           <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.mobile }}</td>
+           </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

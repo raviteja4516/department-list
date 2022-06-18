@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEPARTMENT STUDENT LIST</title>
+</head>
+<body>
+<h1>DEPARTMENT STUDENT LIST</h1>
+<h1>{{ department.department_name }}</h1>
+<ul>
+{% for student in department.student_set.all %}
+    <li>{{ student.name }}</li>
+    <li>{{ student.email }}</li>
+    <li>{{ student.mobile }}</li>
+{% endfor %}
+</ul>
+
+
+</body>
+</html>
